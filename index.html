@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astolf_fr</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="window music" id="mydiv">
+        <div class="window_bar" id="mydivheader">
+            <p>Music</p>
+            <div class="btn close" onclick="document.getElementById('mydiv').style.display = 'none'">X</div>
+        </div>
+        <div class="content">
+            <audio src="https://radio.plaza.one/ogg" id="player"></audio>
+            <div class="cover"></div>
+            <div class="controls">
+                <button id="play" onclick="document.getElementById('player').play()">▶</button>
+                <button id="Pause" onclick="document.getElementById('player').pause()">❚❚</button>
+            </div>
+        </div>
+    </div>
+    <div class="desktop_icons">
+        <div class="app">
+            <a href="https://youtu.be/dQw4w9WgXcQ">
+                <div class="icon"></div>
+                <p>My Computer</p>
+            </a>
+        </div>
+        <div class="app">
+            <a href="https://discordapp.com/users/1040895357539844128">
+                <div class="icon"></div>
+                <p>Discord</p>
+            </a>
+        </div>
+        <div class="app">
+            <a href="https://t.me/astolf_fr">
+                <div class="icon"></div>
+                <p>Telegram</p>
+            </a>
+        </div>
+        <div class="app">
+            <a href="https://elgoog.im/dinosaur-game/">
+                <div class="icon"></div>
+                <p>Game</p>
+            </a>
+        </div>
+        <div class="app wall">
+            <div class="icon"></div>
+            <p>Change<br>Wallpaper</p>
+        </div>
+        <div class="app" onclick="document.getElementById('mydiv').style.display = 'block'">
+            <div class="icon"></div>
+            <p>Music</p>
+        </div>
+        <div class="app">
+            <a href="bsod.html">
+                <div class="icon"></div>
+                <p>Recycle Bin</p>
+            </a>
+        </div>
+    </div>
+    <div class="start_menu">
+        <div class="start_btn"><img src="images/icons/start_ico.png" alt="">
+            <p>Start</p>
+        </div>
+        <div id="clock">00:00</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

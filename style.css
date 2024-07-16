@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #00807F;
+    font-family: 'W95FA';
+    background-image: url(images/wallpaper/w2.jpg);
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transition: background-image 0.2s ease-in-out;
+    overflow: hidden;
+}
+.window {
+    display: none;
+    z-index: 8;
+    padding: 2px;
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    transform: translate(-80%, -85%);
+    background-color: #c0c0c0;
+    min-width: 300px;
+    min-height: fit-content;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    box-shadow: 1px 1px black;
+    animation: pop-up 10ms 0.8s;
+    overflow: auto;
+}
+.window_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 4px;
+    height: 24px;
+    background: linear-gradient(to right, navy, #1084d0);
+    align-content: center;
+}
+.window_bar p {
+    color: #ffffff;
+    user-select: none;
+}
+.close {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    background-color: #c0c0c0;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    box-shadow: 1px 1px black;
+    font-weight: bold;
+    user-select: none;
+}
+.close:active {
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: none;
+}
+.content {
+    margin-top: 4px;
+}
+.cover {
+    width: auto;
+    height: 20vh;
+    min-height: 1em;
+    background-image: url(images/visual2.gif);
+    background-position: center;
+    background-size: cover;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin-top: 1%;
+}
+.controls button {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    box-shadow: 1px 1px black;
+    font-size: large;
+    text-align: center;
+}
+.controls button:active {
+    background-color: #000080;
+    color: #c0c0c0;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: none;
+}
+.app_tray {
+    width: 20px;
+    height: 2%;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+
+}
+.start_menu {
+    z-index: 9;
+    background: #c0c0c0;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    border-top: solid 2px #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.start_btn {
+    display: flex;
+    margin: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    max-width: fit-content;
+    max-height: 38px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+    box-shadow: 1px 1px black;
+    justify-content: center;
+    align-items: center;
+}
+.start_btn img {
+    margin: auto;
+    width: 2em;
+    height: 2em;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.start_btn p{
+    user-select: none;
+    margin: 4px;
+    font-weight: bold;
+}
+.start_btn:active {
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background-color: #000080;
+    box-shadow: none;
+    color: #c0c0c0;
+}
+#clock {
+    margin: 4px;
+    margin-right: 20px;
+    letter-spacing: 0.1rem;
+    border-top: 1.5px solid #818181;
+    border-left: 1.5px solid #818181;
+    border-right: 1.5px solid #ffffff;
+    border-bottom: 1.5px solid #ffffff;
+    padding: 5px 10px 5px 10px;
+}
+.desktop_icons {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 91.5vh;
+    justify-items: start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.app {
+    margin: 8px;
+    cursor: pointer;
+    align-items: center;
+    align-content: center;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.app p {
+    color: #ffffff;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: black 2px 2px;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin: 10px;
+}
+.app:active{
+    background-color: rgba(0, 0, 128, .5);
+}
+.app:nth-child(1) .icon {
+    background-image: url(images/icons/pc.png);
+}
+.app:nth-child(2) .icon {
+    background-image: url(images/icons/discord.png);
+}
+.app:nth-child(3) .icon {
+    background-image: url(images/icons/tg.png);
+}
+.app:nth-child(4) .icon {
+    background-image: url(images/icons/game.png);
+}
+.app:nth-child(5) .icon {
+    background-image: url(images/icons/paint.webp);
+}
+.app:nth-child(6) .icon {
+    background-image: url(images/icons/music.png);
+}
+.app:nth-child(7) .icon {
+    background-image: url(images/icons/trash.png);
+}
+/* .app:nth-child(6) {
+
+} */
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('./fonts/w95fa.woff');
+}
+@keyframes pop-up {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
