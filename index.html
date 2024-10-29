@@ -20,10 +20,24 @@
             <audio src="https://radio.plaza.one/ogg" id="player"></audio>
             <div class="cover"></div>
             <div class="controls">
-                <button id="play" onclick="document.getElementById('player').play()">▶</button>
-                <button id="Pause" onclick="document.getElementById('player').pause()">❚❚</button>
+                <button id="playPause" onclick="togglePlayPause()">▶</button>
             </div>
         </div>
+        
+        <script>
+            const player = document.getElementById('player');
+            const playPauseButton = document.getElementById('playPause');
+        
+            function togglePlayPause() {
+                if (player.paused) {
+                    player.play();
+                    playPauseButton.textContent = '❚❚'; // Change to pause symbol
+                } else {
+                    player.pause();
+                    playPauseButton.textContent = '▶'; // Change back to play symbol
+                }
+            }
+        </script>        
     </div>
     <div class="window game" id="mydiv2">
         <div class="window_bar" id="mydivheader">
