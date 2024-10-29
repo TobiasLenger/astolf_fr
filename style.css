@@ -283,4 +283,7 @@ a {
     .warn {
         display: block;
     }
+    body {
+        background-position: 80%;
+    }
 }
