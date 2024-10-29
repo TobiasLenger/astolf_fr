@@ -101,8 +101,8 @@ body {
     text-align: center;
 }
 .controls button:active {
-    background-color: #000080;
-    color: #c0c0c0;
+    outline: dotted 2px #373737;
+    outline-offset: -5px;
     border-top: 1px solid #000000;
     border-left: 1px solid #000000;
     border-right: 1px solid #ffffff;
@@ -166,9 +166,9 @@ body {
     border-left: 1px solid #000000;
     border-right: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
-    background-color: #000080;
     box-shadow: none;
-    color: #c0c0c0;
+    outline: dotted 2px #373737;
+    outline-offset: -5px;
 }
 #clock {
     margin: 4px;
@@ -227,15 +227,18 @@ body {
     background-image: url(images/icons/tg.png);
 }
 .app:nth-child(4) .icon {
-    background-image: url(images/icons/game.png);
+    background-image: url(images/icons/insta.png);
 }
 .app:nth-child(5) .icon {
-    background-image: url(images/icons/paint.webp);
+    background-image: url(images/icons/game.png);
 }
 .app:nth-child(6) .icon {
-    background-image: url(images/icons/music.png);
+    background-image: url(images/icons/paint.webp);
 }
 .app:nth-child(7) .icon {
+    background-image: url(images/icons/music.png);
+}
+.app:nth-child(8) .icon {
     background-image: url(images/icons/trash.png);
 }
 /* .app:nth-child(6) {
