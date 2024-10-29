@@ -1,36 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Array of background image URLs
-    const backgrounds = [
-        'url("./images/wallpaper/w1.jpg")',
-        'url("./images/wallpaper/w2.jpg")',
-        'url("./images/wallpaper/w3.jpg")',
-        'url("./images/wallpaper/w4.jpg")',
-        // Add more image URLs as needed
-    ];
+  // Array of background image URLs
+  const backgrounds = [
+      'url("./images/wallpaper/w1.jpg")',
+      'url("./images/wallpaper/w2.jpg")',
+      'url("./images/wallpaper/w3.jpg")',
+      'url("./images/wallpaper/w4.jpg")',
+      // Add more image URLs as needed
+  ];
+  
+  // Select the .wall div
+  const wallDiv = document.querySelector('.wall');
 
-    // Select the .wall div
-    const wallDiv = document.querySelector('.wall');
+  // Variable to keep track of the current index
+  let currentIndex = Math.floor(Math.random() * backgrounds.length); // Start with a random index
 
-    // Variable to keep track of the current index
-    let currentIndex = 0;
+  // Set an initial random background image when the page loads
+  document.body.style.backgroundImage = backgrounds[currentIndex];
 
-    // Check if .wall div exists
-    if (wallDiv) {
-        // Add click event listener to .wall div
-        wallDiv.addEventListener('click', function() {
-            // Get the background image URL at the current index
-            const currentBackground = backgrounds[currentIndex];
-            
-            // Set the background image of the body
-            document.body.style.backgroundImage = currentBackground;
-            
-            // Increment the index
-            currentIndex = (currentIndex + 1) % backgrounds.length;
-        });
-    } else {
-        console.error('.wall div not found.');
-    }
+  // Check if .wall div exists
+  if (wallDiv) {
+      // Add click event listener to .wall div
+      wallDiv.addEventListener('click', function() {
+          // Increment the index for the next image
+          currentIndex = (currentIndex + 1) % backgrounds.length;
+          
+          // Set the background image of the body
+          document.body.style.backgroundImage = backgrounds[currentIndex];
+      });
+  } else {
+      console.error('.wall div not found.');
+  }
 });
+
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("mydiv1"));
